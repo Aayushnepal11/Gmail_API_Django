@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'spam_checker:home' %}">Spam Checker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'spam_checker:home' %}">Inbox<span
+                        class="badge mx-1 text-light bg-dark">
+                        {% if mail_box_data.0 %}
+                            {{ mail_box_data.0 }}
+                            {% else %}
+                            {{ mail_box_data.0 | length }}
+                        {% endif %}
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'spam_checker:spam' %}">Spam<span
+                        class="badge mx-1 text-light bg-dark">
+                        {% if mail_box_data.1 %}
+                            {{ mail_box_data.1 }}
+                            {% else %}
+                            {{ mail_box_data.1 | length }}
+                        {% endif %}
+                    </span>
+                    </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Drafts
+                    <span class="badge mx-1 text-light bg-dark">
+                        {% if mail_box_data.2|length == 0 %}
+                            0
+                            {% else %}
+                            {{ mail_box_data.2 }}
+                        {% endif %}
+                    </span>
+                    </a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% comment %} <div class="col-md-3 sidebar">
+    <nav class="nav navbar">
+        <div class="sidebar-header">
+            <h5 class="display-6 text-center">Spam Checker</h5>
+        </div>
+
+        <ul class="list-unstyled components d-flex flex-column justify-content-center align-items-center">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'spam_checker:home' %}">Inbox<span
+                        class="badge mx-1 text-light bg-dark">
+                        {% if mail_box_data.0 %}
+                            {{ mail_box_data.0 }}
+                            {% else %}
+                            {{ mail_box_data.0 | length }}
+                        {% endif %}
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'spam_checker:spam' %}">Spam<span
+                        class="badge mx-1 text-light bg-dark">
+                        {% if mail_box_data.1 %}
+                            {{ mail_box_data.1 }}
+                            {% else %}
+                            {{ mail_box_data.1 | length }}
+                        {% endif %}
+                    </span>
+                    </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Drafts
+                    <span class="badge mx-1 text-light bg-dark">
+                        {% if mail_box_data.2|length == 0 %}
+                            0
+                            {% else %}
+                            {{ mail_box_data.2 }}
+                        {% endif %}
+                    </span>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+</div> {% endcomment %}

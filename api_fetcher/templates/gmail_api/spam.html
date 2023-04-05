@@ -1,0 +1,21 @@
+{% extends 'gmail_api/base.html' %}
+
+
+
+{% block content %}
+<div class="col-md-8">
+<div class="row my-3">
+    {% for data in fetch_data %}
+        <div class="list-group">
+            {% for key, value in data.items %}
+            <span class="badge text-black-50">
+                {{ key }}
+            </span>
+            <span class="badge text-black-50">{{ value }}</span>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock content %}
