@@ -5,15 +5,7 @@ ___
 
 # Spam Checker
 
-___
-
-  
-
-___
-
 # Processes
-
-___
 
 * First you need to setup your credentials.json file to work with the gmail.
 
@@ -25,5 +17,5 @@ ___
 
 ___
 
-___
+
  
