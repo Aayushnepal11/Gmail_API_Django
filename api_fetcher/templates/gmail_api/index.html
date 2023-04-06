@@ -3,16 +3,22 @@
 {% block content %}
 <div class="col-md-8">
     <div class="row my-3">
+        <div class="list-group">
+            <div class="col-md-12">
         {% for data in fetch_data %}
-            <div class="list-group">
                 {% for key, value in data.items %}
                 <span class="badge text-black-50">
                     {{ key }}
                 </span>
-                <span class="badge text-black-50">{{ value }}</span>
+                <span class="badge text-black-50">{{ value }}</span><br />
                 {% endfor %}
+                {% empty %}
+                    {% for message in messages %}
+                        <div class="alert alert-info"> {{ message }}</div>
+                    {% endfor %}
+                    {% endfor %}
             </div>
-        {% endfor %}
+        </div>
     </div>
 </div>
 
