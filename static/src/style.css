@@ -9,3 +9,11 @@
     flex: 1;
     justify-content: space-around;
 }
+.col-md-8{
+    margin: auto !important;
+}
+
+.row .list-group{
+    display: flex !important;
+    flex-direction: row !important;
+}
