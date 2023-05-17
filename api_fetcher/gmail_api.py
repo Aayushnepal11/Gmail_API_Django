@@ -32,7 +32,7 @@ def build_service(cerds):
     return build('gmail', 'v1', credentials=cerds)
 
 
-class GmailAPI:
+class GmailAPI():
     def __init__(self, creds=None, url=None):
         """
             If you are modifying this scope you've to delete the generated token file.
