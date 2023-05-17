@@ -6,18 +6,14 @@
     <meta charset="utf-8">
     <title> {% if title %} {{ title }} {% else %} Spam Checker {% endif %} </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'src/style.css' %}">
+    <link rel="stylesheet" href="{% static 'src/css/style.css' %}">
     {% bootstrap_css %}
 </head>
 <body>
-    <div class="row" style="width: 100%">
-        {% block sidebar %}
-            {% include 'gmail_api/includes/nav.html' %}
-        {% endblock sidebar %}
-
-
-        {% block content %}{% endblock content %}
-    </div>
+    {% block content %}
+        
+    {% endblock content %}
+    
     {% bootstrap_javascript %}
 </body>
 </html>

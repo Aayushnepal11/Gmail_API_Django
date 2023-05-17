@@ -1,0 +1,65 @@
+body {
+    background: url("../images/banner.jpg") no-repeat;
+    background-size: cover;
+  }
+  
+  .feature-lg {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  .feature-lg .text-display-1 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 400;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  .d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-custom {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 24px;
+    background: rgba(45, 45, 227, 0.8);
+    padding: 20px 15px;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+    text-transform: capitalize;
+    width: 150px;
+    text-align: center;
+  }
+  .btn-custom:hover {
+    background: rgba(45, 45, 227, 0.562);
+    color: #fff;
+  }
+  
+  .spam-btn{
+    background: rgb(233, 49, 49);
+  }
+  .spam-btn:hover{
+    background: rgba(233, 49, 49, 0.568);
+    color: #fff;
+  }
+
+
+  @media screen and (max-width:420px) {
+    body{
+      height: 100vh;
+      background-position: center;
+    }
+    .text-display-1{
+      letter-spacing: 2px;
+      line-height: 50px;
+    }
+    .d-flex{
+      flex-direction: column;
+    }
+  }
+  
+  

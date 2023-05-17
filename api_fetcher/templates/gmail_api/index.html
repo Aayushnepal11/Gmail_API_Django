@@ -1,25 +1,14 @@
 {% extends 'gmail_api/base.html' %}
-
 {% block content %}
-<div class="col-md-8">
-    <div class="row my-3">
-        <div class="list-group">
-            <div class="col-md-12">
-        {% for data in fetch_data %}
-                {% for key, value in data.items %}
-                <span class="badge text-black-50">
-                    {{ key }}
-                </span>
-                <span class="badge text-black-50">{{ value }}</span><br />
-                {% endfor %}
-                {% empty %}
-                    {% for message in messages %}
-                        <div class="alert alert-info"> {{ message }}</div>
-                    {% endfor %}
-                    {% endfor %}
+<section class="main">
+    <section class="feature-lg">
+        <div class="feature-header">
+            <h1 class="text-display-1">Welcome To Spam Checker</h1>
+            <div class="d-flex">
+                <a class="btn-custom m-2 inbox-btn" href="#">inbox</a>
+                <a class="btn-custom spam-btn" href="#">spam</a>
             </div>
         </div>
-    </div>
-</div>
-
+    </section>
+</section>
 {% endblock content %}
