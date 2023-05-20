@@ -1,0 +1,12 @@
+# def csv_file_reader(filename, *args):
+#     args = list(args)
+#     with open(filename, 'r') as csv_file:
+#        csv_reader =  csv.reader(csv_file)
+#        args.append(csv_reader)
+#     return args
+    
+# data_head = data_list[0]
+# with open(f'{filename}.csv', mode='w', encoding='utf-8',newline='') as csv_file:
+#    csv_writer = csv.DictWriter(csv_file, data_head)
+#    csv_writer.writeheader()
+#    csv_writer.writerows(data_list) 
