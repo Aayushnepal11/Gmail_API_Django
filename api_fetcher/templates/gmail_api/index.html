@@ -5,8 +5,8 @@
         <div class="feature-header">
             <h1 class="text-display-1">Welcome To Spam Checker</h1>
             <div class="d-flex">
-                <a class="btn-custom m-2 inbox-btn" href="#">inbox</a>
-                <a class="btn-custom spam-btn" href="#">spam</a>
+                <a class="btn-custom m-2 inbox-btn" href="{% url 'spam_checker:inbox' %}">inbox <span>{{inbox_count}}</span></a>
+                <a class="btn-custom spam-btn" href="{% url 'spam_checker:spam' %}">spam <span>{{spam_count}}</span></a>
             </div>
         </div>
     </section>

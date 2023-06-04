@@ -1,25 +1,29 @@
-{% comment %} {% extends 'gmail_api/base.html' %}
-
+{% extends 'gmail_api/base.html' %}
 {% block content %}
-<div class="col-md-8">
-    <div class="row my-3">
-        <div class="list-group">
-            <div class="col-md-12">
-        {% for data in fetch_data %}
-                {% for key, value in data.items %}
-                <span class="badge text-black-50">
-                    {{ key }}
-                </span>
-                <span class="badge text-black-50">{{ value }}</span><br />
-                {% endfor %}
-                {% empty %}
-                    {% for message in messages %}
-                        <div class="alert alert-info"> {{ message }}</div>
-                    {% endfor %}
-                    {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
 
-{% endblock content %} {% endcomment %}
+<section class="d-flex">
+    <h1 class="display-3 text-white bg-dark">Inbox Data</h1>
+</section>
+
+<table class="table table-bordered">
+  <thead class="text-white">
+    <tr>
+      <th>Date</th>
+      <th>From</th>
+      <th>Subject</th>
+    </tr>
+  </thead>
+  <tbody class="text-white">
+    {% for data in fetch_data %}
+      <tr>
+        <td>{{ data.Date}}</td>
+        <td>{{ data.From }}</td>
+        <td>{{ data.Subject }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<section class="d-flex justify-content-center">
+    <a class="btn btn-primary m-2" href="{% url 'spam_checker:home' %}">Back to Home</a>
+  </section>
+{% endblock content %}

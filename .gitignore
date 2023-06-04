@@ -5,3 +5,6 @@ env
 __pycache__
 migrations
 *.json
+*.csv
+*.txt
+uploads/
